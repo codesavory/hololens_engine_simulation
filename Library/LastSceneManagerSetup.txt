@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/engine_simulation_hololens.unity
+  isLoaded: 1
+  isActive: 1
