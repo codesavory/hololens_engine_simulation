@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class cursor : MonoBehaviour {
     private MeshRenderer meshRenderer;
-    //public GameObject FocusedObject { get; private set; }
+    public GameObject FocusedObject { get; private set; }
     // Use this for initialization
     void Start()
     {
@@ -24,26 +24,26 @@ public class cursor : MonoBehaviour {
             System.Diagnostics.Debug.WriteLine("Hit Enabled");
             meshRenderer.enabled = true;
             this.transform.position = hitInfo.point;
-            //this.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+            this.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
 
-            /*var newFocusedObject = hitInfo.collider.gameObject;
+            var newFocusedObject = hitInfo.collider.gameObject;
             if (FocusedObject != null && newFocusedObject != FocusedObject)
             {
                 FocusedObject.SendMessage("OnReset");
             }
 
             FocusedObject = newFocusedObject;
-            FocusedObject.SendMessage("OnSelect");*/
+            FocusedObject.SendMessage("OnSelect");
         }
         else
         {
             System.Diagnostics.Debug.WriteLine("Hit Disabled");
             meshRenderer.enabled = false;
-            /*if (FocusedObject != null)
+            if (FocusedObject != null)
             {
                 FocusedObject.SendMessage("OnReset");
             }
-            FocusedObject = null;*/
+            FocusedObject = null;
         }
     }
 }
