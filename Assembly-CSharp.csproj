@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\color_translucency.cs" />
      <Compile Include="Assets\cursor.cs" />
+     <Compile Include="Assets\sc.cs" />
+     <Compile Include="Assets\ToolTip.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
