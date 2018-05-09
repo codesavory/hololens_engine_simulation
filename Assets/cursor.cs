@@ -21,7 +21,7 @@ public class cursor : MonoBehaviour {
         RaycastHit hitInfo;
         if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
         {
-            System.Diagnostics.Debug.WriteLine("Hit Enabled");
+            //System.Diagnostics.Debug.WriteLine("Hit Enabled");
             meshRenderer.enabled = true;
             this.transform.position = hitInfo.point;
             this.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
@@ -37,7 +37,7 @@ public class cursor : MonoBehaviour {
         }
         else
         {
-            System.Diagnostics.Debug.WriteLine("Hit Disabled");
+            //System.Diagnostics.Debug.WriteLine("Hit Disabled");
             meshRenderer.enabled = false;
             if (FocusedObject != null)
             {
